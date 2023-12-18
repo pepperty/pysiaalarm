@@ -19,7 +19,7 @@ async def main():
         #     raise ValueError
         events.append(event)
 
-    with open("tests\\ha.json", "r") as f:
+    with open("pysiaalarm/tests/encrypted_config.json", "r") as f:
         config = json.load(f)
     account = [SIAAccount(config["account_id"], config["key"])]
     async with SIAClient(

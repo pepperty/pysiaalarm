@@ -13,7 +13,7 @@ def func(event: SIAEvent):
     events.append(event)
 
 
-with open("local_config.json", "r") as f:
+with open("pysiaalarm/tests/encrypted_config.json", "r") as f:
     config = json.load(f)
 print("Config: ", config)
 account = [SIAAccount(config["account_id"], config["key"])]
